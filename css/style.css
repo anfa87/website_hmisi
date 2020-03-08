@@ -979,13 +979,21 @@ h6 {
   transition: height 0.4s;
 }
 
+<<<<<<< HEAD
 #team .member:hover .member-info {
+=======
+/* #team .member:hover .member-info {
+>>>>>>> 3cf770b512d63c12afd450222493966babd76fb3
   transition: 0.4s;
 }
 
 #team .member:hover .member-info-content {
   height: 80px;
+<<<<<<< HEAD
 }
+=======
+} */
+>>>>>>> 3cf770b512d63c12afd450222493966babd76fb3
 
 #team .member h4 {
   font-weight: 700;
@@ -1010,9 +1018,15 @@ h6 {
   color: #fff;
 }
 
+<<<<<<< HEAD
 #team .member .social a:hover {
   color: #1bb1dc;
 }
+=======
+/* #team .member .social a:hover {
+  color: #1bb1dc;
+} */
+>>>>>>> 3cf770b512d63c12afd450222493966babd76fb3
 
 #team .member .social i {
   font-size: 18px;
