@@ -60,7 +60,7 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Utilities:</h6>
-            <a class="collapse-item" href="logout.php">Logout</a>
+            <a class="collapse-item" href="logout.html">Logout</a>
           </div>
         </div>
       </li>
@@ -82,9 +82,9 @@
         <div id="collapsetable" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Input Data:</h6>
-            <a class="collapse-item" href="input_proker.php">Program Kerja</a>
-            <a class="collapse-item" href="input_berita.php">berita</a>
-            <a class="collapse-item" href="input_kepengurusan.php">Kepengurusan</a>
+            <a class="collapse-item" href="input_proker.html">Program Kerja</a>
+            <a class="collapse-item" href="input_berita.html">berita</a>
+            <a class="collapse-item" href="input_kepengurusan.html">Kepengurusan</a>
           </div>
         </div>
       </li>
@@ -106,7 +106,7 @@
         <div id="collapeAccount" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Account:</h6>
-            <a class="collapse-item" href="input_account.php">Akun Admin</a>
+            <a class="collapse-item" href="input_account.html">Akun Admin</a>
           </div>
         </div>
       </li>
@@ -178,22 +178,123 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Selamat datang, Randynetworks</h1>
-          </div>
-
           <!-- Content Row -->
-          <div class="d-sm-flex mb-0">
-            <h1 class="h6 mb-3 text-gray-800">Data yang telah diinput : 100 buah</h1>
+          <div class="ml-5 mr-5">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <p class="display-4 mt-4ml-5">Form Input Data Anggota</p>
+            </div>
+            <form action="create.php" method="post">
+              <!--Input-->
+              <!--npm-->
+              <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">NPM</span>
+                </div>
+                <input name="id" type="text" class="form-control" placeholder="Masukan NPM..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+
+              <!--nama-->
+              <div class="input-group flex-nowrap pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Nama</span>
+                </div>
+                <input name="Nama" type="text" class="form-control" placeholder="Masukan Nama..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+
+              <!--kelas-->
+              <div class="input-group flex-nowrap pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">&nbspKelas&nbsp</span>
+                </div>
+                <input name="kelas" type="text" class="form-control" placeholder="Masukan Kelas..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+
+              <!--jabatan-->
+              <div class="input-group flex-nowrap pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Jabatan&nbsp;</span>
+                </div>
+                <input name="create_by" type="text" class="form-control" placeholder="Masukan Jabatan..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+
+              <!--img-->
+              <div class="input-group flex-nowrap pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Imange&nbsp;</span>
+                </div>
+                <input name="id" type="file" class="form-control" placeholder="Upload File..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+              <!-- jabatan -->
+              <div class="input-group flex-nowrap pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Jabatan&nbsp;</span>
+                </div>
+                <input name="create_by" type="text" class="form-control" placeholder="Masukan Jabatan..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+
+              <!-- status -->
+              <div class="input-group flex-nowrap pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">Status&nbsp;</span>
+                </div>
+                <input name="create_by" type="text" class="form-control" placeholder="Masukan Jabatan..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+              <!--Button Input-->
+              <div>
+                <button name="submit" type="submit" class="btn btn-primary mt-4">Save</button>
+              </div>
           </div>
 
-          <div class="d-sm-flex mb-0">
-            <h1 class="h6 mb-3 text-gray-800">Terakhir data diubah/ditambahkan : 9 Maret 2020</h1>
-          </div>
+          </form>
 
+          <!--Table Data-->
+          <div class="row ml-5 mr-5">
+            <p class="display-4 mt-4">Table Data</p>
+            <table id="myTable" class="table mt-4 table-hover table-responsive-sm">
+              <tr>
+                <th>No.</th>
+                <th>NPM</th>
+                <th>Nama</th>
+                <th>Kelas</th>
+                <th>Jabatan</th>
+                <th>img</th>
+                <th>status</th>
+                <th>Option</th>
+              </tr>
+                <tr>
+                  <th>1</th>
+                  <td>18402137</td>
+                  <td>Randy Ramadhan</td>
+                  <td>MSI-R42/18</td>
+                  <td>Anggota</td>
+                  <td><img src="img/randy.png" alt="" height="100px" width="100px"></td>
+                  <td>Anggota</td>
+                  <td>
+                    <a href="ubah_data.php?id=<? echo $p['ID']; ?>">Ubah</a> |
+                    <a href="hapus.php?id=<? echo $p['ID']; ?>">Hapus</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>18402137</td>
+                  <td>Randy Ramadhan</td>
+                  <td>MSI-R42/18</td>
+                  <td>Anggota</td>
+                  <td><img src="img/randy.png" alt="" height="100px" width="100px"></td>
+                  <td>Anggota</td>
+                  <td>
+                    <a href="ubah_data.php?id=<? echo $p['ID']; ?>">Ubah</a> |
+                    <a href="hapus.php?id=<? echo $p['ID']; ?>">Hapus</a>
+                  </td>
+                </tr>
+            </table>
+          </div>
+          <br> 
         </div>
+      </div>
+    </div>
+  </div>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
