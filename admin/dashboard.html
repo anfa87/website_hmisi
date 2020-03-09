@@ -29,11 +29,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">Administrator</div>
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+        <div class="sidebar-brand-text mx-3">Admin Randy</div>
       </a>
 
       <!-- Divider -->
@@ -41,7 +38,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="dashboard.php">
+        <a class="nav-link" href="dashboard.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -53,29 +50,7 @@
       <div class="sidebar-heading">
         Interface
       </div>
-      <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-          <i class="fas fa-fw fa-folder"></i>
-          <span>Pages</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Components:</h6>
-            <a class="collapse-item" href="../index.php" target="_blank">Main Website</a>
-            <h6 class="collapse-header">Belajar:</h6>
-            <a class="collapse-item" href="../product.php" target="_blank">F&B Product</a>
-            <a class="collapse-item" href="../service.php" target="_blank">F&B Service</a>
-            <h6 class="collapse-header">Resep:</h6>
-            <a class="collapse-item" href="../resep_continental.php" target="_blank">Kontinental</a>
-            <a class="collapse-item" href="../resep_oriental.php" target="_blank">Oriental</a>
-            <a class="collapse-item" href="../resep_nusantara.php" target="_blank">Nusantara</a>
-
-          </div>
-        </div>
-      </li>
-      <li class="nav-item">
-
         <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -95,27 +70,47 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Addons
+        Input Data
       </div>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetable" aria-expanded="true" aria-controls="collapsetable">
           <i class="fas fa-fw fa-table"></i>
-          <span>Table Input</span>
+          <span>Form Input</span>
         </a>
         <div id="collapsetable" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Role:</h6>
-            <a class="collapse-item" href="role.php">Input Role</a>
             <h6 class="collapse-header">Input Data:</h6>
-            <a class="collapse-item" href="input.php">Input Data</a>
-            <h6 class="collapse-header">Card:</h6>
-            <a class="collapse-item" href="input_card.php" target="_blank">Input Data</a>
+            <a class="collapse-item" href="input.php">Program Kerja</a>
+            <a class="collapse-item" href="input.php">berita</a>
+            <a class="collapse-item" href="input.php">Kepengurusan</a>
           </div>
         </div>
       </li>
+      
+      <!-- Divider -->
+      <hr class="sidebar-divider">
 
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Input Data
+      </div>
+
+      <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapeAccount" aria-expanded="true" aria-controls="collapeAccount">
+          <i class="fas fa-fw fa-address-book"></i>
+          <span>Account</span>
+        </a>
+        <div id="collapeAccount" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Account:</h6>
+            <a class="collapse-item" href="account.php">Akun Admin</a>
+          </div>
+        </div>
+      </li>
+      
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -186,20 +181,16 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Selamat datang, Admin</h1>
+            <h1 class="h3 mb-0 text-gray-800">Selamat datang, Randynetworks</h1>
           </div>
 
           <!-- Content Row -->
           <div class="d-sm-flex mb-0">
-            <h1 class="h6 mb-3 text-gray-800"><? echo "Data yang telah di input : " . $count  . " Buah." ?></h1>
-          </div>
-
-          <div class="d-sm-flex mb-1">
-            <h1 class="h6 mb-3 text-gray-800"><? echo "Data Card yang telah di input : " . $count_card  . " Buah." ?></h1>
+            <h1 class="h6 mb-3 text-gray-800">Data yang telah diinput : 100 buah</h1>
           </div>
 
           <div class="d-sm-flex mb-0">
-            <h1 class="h6 mb-3 text-gray-800"><? echo "Data terakhir di tambahkan Pada " . $time_data['create_date'] . " " . $time_data['create_by'] ?></h1>
+            <h1 class="h6 mb-3 text-gray-800">Terakhir data diubah/ditambahkan : 9 Maret 2020</h1>
           </div>
 
         </div>
@@ -217,5 +208,4 @@
     </div>
   </div>
 </body>
-
 </html>
