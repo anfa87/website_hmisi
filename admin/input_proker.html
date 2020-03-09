@@ -82,9 +82,9 @@
         <div id="collapsetable" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Input Data:</h6>
-            <a class="collapse-item" href="input_proker.html">Program Kerja</a>
-            <a class="collapse-item" href="input_berita.html">berita</a>
-            <a class="collapse-item" href="input_kepengurusan.html">Kepengurusan</a>
+            <a class="collapse-item" href="input_proker.php">Program Kerja</a>
+            <a class="collapse-item" href="input_berita.php">berita</a>
+            <a class="collapse-item" href="input_kepengurusan.php">Kepengurusan</a>
           </div>
         </div>
       </li>
@@ -106,7 +106,7 @@
         <div id="collapeAccount" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Account:</h6>
-            <a class="collapse-item" href="input_account.html">Akun Admin</a>
+            <a class="collapse-item" href="input_account.php">Akun Admin</a>
           </div>
         </div>
       </li>
@@ -176,24 +176,83 @@
         </nav>
         <!-- End of Topbar -->
 
+        <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Selamat datang, Randynetworks</h1>
-          </div>
-
           <!-- Content Row -->
-          <div class="d-sm-flex mb-0">
-            <h1 class="h6 mb-3 text-gray-800">Data yang telah diinput : 100 buah</h1>
+          <div class="ml-5 mr-5">
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <p class="display-4 mt-4ml-5">Form Input Data</p>
+            </div>
+            <form action="create.php" method="post">
+              <!--Input-->
+              <!--Foto-->
+              <div class="input-group flex-nowrap">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">&ensp;&emsp;Foto&emsp;&ensp;&emsp;&ensp;&ensp;</span>
+                </div>
+                <input name="id" type="file" class="form-control" placeholder="Upload File..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+
+              <!--Keterangan-->
+              <div class="input-group flex-nowrap pt-4">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="addon-wrapping">&emsp;Keterangan&emsp;</span>
+                </div>
+                <input name="title" type="text" class="form-control" placeholder="Masukan keterangan Foto..." aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+              <!--Button Input-->
+              <div>
+                <button name="submit" type="submit" class="btn btn-primary mt-4">Save</button>
+              </div>
           </div>
 
-          <div class="d-sm-flex mb-0">
-            <h1 class="h6 mb-3 text-gray-800">Terakhir data diubah/ditambahkan : 9 Maret 2020</h1>
+          </form>
+
+          <!--Table Data-->
+          <div class="row ml-5 mr-5">
+            <p class="display-4 mt-4">Table Data</p>
+            <table id="myTable" class="table mt-4 table-hover table-responsive-sm">
+              <tr>
+                <th>No.</th>
+                <th>Foto</th>
+                <th>Keterangan</th>
+                <th>Option</th>
+              </tr>
+              <tr>
+                  <td>1</td>
+                  <td><img src="img/bg1.jpg" alt="" height="200px" width="200px"></td>
+                  <td>Ini contoh Gambar</td>
+                  <td>
+                    <a href="">Ubah</a> |
+                    <a href="">Hapus</a>
+                  </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><img src="img/bg1.jpg" alt="" height="200px" width="200px"></td>
+                <td>Ini contoh Gambar 2</td>
+                <td>
+                  <a href="">Ubah</a> |
+                  <a href="">Hapus</a>
+                </td>
+            </tr>
+            </table>
+
           </div>
 
+
+          <br> 
         </div>
+      </div>
+    </div>
+  </div>
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>
         <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
