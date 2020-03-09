@@ -48,12 +48,7 @@
                       <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                     </div>
                     <button name="submit" class="btn btn-primary btn-user btn-block text-white">Login</button>
-                    <hr>
                   </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="register.php">Create an Account!</a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -72,31 +67,6 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-
-  <?php
-  session_start();
-  if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username' AND password='$password'");
-    $sql = mysqli_fetch_array($query);
-    if ($username == NULL or $password == NULL) {
-      echo "
-      <script>
-      sweetAlert('Mohon Maaf... Username atau Password salah !');
-      </script>
-      ";
-    } elseif (mysqli_num_rows($query)) {
-      header("Location:dashboard.php");
-    } else {
-
-      echo "<script>
-            sweetAlert('Mohon Maaf... Harap Isi Terlebih Dahulu !');
-          </script>";
-    }
-  }
-  ?>
-
 </body>
 
 </html>

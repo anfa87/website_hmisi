@@ -1,18 +1,3 @@
-<?
-include('../koneksi.php');
-session_start();
-$sql = "SELECT * FROM table_data_input";
-$sql_card = "SELECT * FROM table_card_menu";
-$query = mysqli_query($conn, $sql);
-$query_card = mysqli_query($conn, $sql_card);
-$count = mysqli_num_rows($query);
-$count_card = mysqli_num_rows($query_card);
-
-$sql_time_data = "SELECT create_date, create_by FROM table_data_input ORDER BY create_date DESC LIMIT 1";
-$query_time_data = mysqli_query($conn, $sql_time_data);
-$time_data = mysqli_fetch_array($query_time_data)
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
